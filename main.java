@@ -29,6 +29,13 @@ public class main extends Thread{
 		myThread.join();
 		System.out.println(myThread.getState());
 		
+		/* Question --> is When to apply Runnable and when to apply Thread
+		 Answer:-  is suppose we have one class A which extends B
+		 now if we want to make the thread then we cannot extend Thread class
+		 as multiple inheritance is not possible in java hence we can use
+		 runnable interface by which we can also create the thread
+		 */
+		
 		
 	}
 	
