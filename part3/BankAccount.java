@@ -7,7 +7,16 @@ import java.util.concurrent.locks.ReentrantLock;
 public class BankAccount {
 	private int balance=100;
 	
-	final private Lock lock=new ReentrantLock();
+	private final Lock lock=new ReentrantLock();
+	
+	/*
+	here we have used ReentrantLock because it helps us to do lock the locked thread
+	so that the program does not go in the deadlock state
+	for example you have 1 task which has 2 subtask so you can lock both of the
+	task but note that you have to unlock it same number of time as lock
+	Also for consistency  you have to unlock the lock in the same block
+	 where you have acquired the lock
+	 */
 	
 	/*
 	lock.tryLock(time,timeunit) will try to wait for the given time to
